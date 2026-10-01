@@ -14,10 +14,16 @@
         font-weight: 400;
         font-style: normal;
       }
-      .photo {
-        display: block;
-        margin: 16px 0;
-      }
+.photos {
+  display: flex;
+  gap: 16px;          /* space between photos */
+  flex-wrap: wrap;    /* drops photos to the next row on narrow screens */
+  margin: 16px 0;
+}
+
+.photos img {
+  object-fit: cover;  /* keeps photos square without stretching them */
+}
     </style>
   </head>
 
@@ -31,7 +37,11 @@
       <p>Hello! I am a current BComp student at Queens University.</p>
       <p>Fun Facts About Me: Loves math (excluding discrete math) and I have a dog!</p>
 
-      <img class="photo" src="0AA0D55A-7575-4123-B0AE-4E6A86E0BE20_1_105_c.jpeg" alt="Hi Hello" width="240" height="240" />
+      <div class="photos">
+        <img src="0AA0D55A-7575-4123-B0AE-4E6A86E0BE20_1_105_c.jpeg" alt="Hi Hello" width="240" height="240" />
+        <img src="photo2.jpg" alt="Description of photo 2" width="240" height="240" />
+        <img src="photo3.jpg" alt="Description of photo 3" width="240" height="240" />
+      </div>
 
       <h2>Projects</h2>
       <ul>
